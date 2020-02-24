@@ -1,0 +1,30 @@
+{
+    "name": "balt-technologies/laravel-services",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Redmann",
+            "email": "tobias.redmann@balt.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Balt\\": ["src/"],
+            "Balt\\": ["tests/"]
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Balt\\Providers\\LaravelServicesServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.2"
+        }
+    }
+}
