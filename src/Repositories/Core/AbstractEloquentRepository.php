@@ -16,7 +16,10 @@ class AbstractEloquentRepository implements CrudRepositoryInterface
      */
     public function create(array $data, array $options = null)
     {
-        return ($this->class)::create($data);
+        $model = new $this->class($data);
+        $model->save();
+
+        return $model;
     }
 
     /**
