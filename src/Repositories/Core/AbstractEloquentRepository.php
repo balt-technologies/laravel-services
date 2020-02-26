@@ -27,7 +27,11 @@ class AbstractEloquentRepository implements CrudRepositoryInterface
      */
     public function update($id, array $data, array $options = null)
     {
-        return ($this->class)::update($id, $data);
+        $model = $this->find($id);
+
+        $model->update($data);
+
+        return $model;
     }
 
     /**
