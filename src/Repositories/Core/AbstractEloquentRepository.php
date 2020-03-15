@@ -55,6 +55,6 @@ class AbstractEloquentRepository implements CrudRepositoryInterface
      */
     public function all($filter = null, array $options = null): Collection
     {
-        return ($this->class)::findAll();
+        return ($this->class)::all();
     }
 }
