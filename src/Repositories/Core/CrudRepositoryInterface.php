@@ -34,10 +34,10 @@ interface CrudRepositoryInterface
     public function find($id, array $options = null);
 
     /**
-     * @param null $filter
+     * @param array|null $filter
      * @param array|null $options
      * @return Collection
      */
-    public function all($filter = null, array $options = null) : Collection;
+    public function all(array $filter = [], array $options = null) : Collection;
 
 }

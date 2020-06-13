@@ -53,7 +53,7 @@ class AbstractEloquentRepository implements CrudRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function all($filter = null, array $options = null): Collection
+    public function all(array $filter = [], array $options = null): Collection
     {
         return ($this->class)::all();
     }
